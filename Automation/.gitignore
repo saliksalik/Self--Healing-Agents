@@ -1,0 +1,14 @@
+node_modules/
+test-results/
+playwright-report/
+.bdd/
+.features-gen/
+reports/
+*.log
+.env
+.env.local
+probe.js
+probe2.js
+probe3.js
+site.json
+
