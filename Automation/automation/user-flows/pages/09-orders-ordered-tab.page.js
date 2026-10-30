@@ -10,10 +10,10 @@ class OrdersOrderedTabPage extends BasePage {
   async openOrders() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/orders');
-    await this.page.getByRole('tab', { name: /ordered/i }).waitFor({ state: 'visible' });
+    await this.page.getByRole('tab', { name: /processed/i }).waitFor({ state: 'visible' });
   }
   async assertOrderedTabSelected() {
-    const tab = this.page.getByRole('tab', { name: /ordered/i });
+    const tab = this.page.getByRole('tab', { name: /processed/i });
     await expect(tab).toBeVisible();
     await expect(tab).toHaveAttribute('aria-selected', 'true');
   }

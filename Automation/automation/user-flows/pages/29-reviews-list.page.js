@@ -10,10 +10,10 @@ class ReviewsListPage extends BasePage {
   async openReviews() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/reviews');
-    await this.page.locator('table tbody tr').first().waitFor({ state: 'visible', timeout: 180000 });
+    await this.page.locator('table tbody tr.review-row').first().waitFor({ state: 'visible', timeout: 180000 });
   }
   async assertReviewRows() {
-    expect(await this.page.locator('table tbody tr').count()).toBeGreaterThan(0);
+    expect(await this.page.locator('table tbody tr.review-row').count()).toBeGreaterThan(0);
   }
 }
 

@@ -39,7 +39,7 @@ const RejectButton = () => {
         }
     );
 
-    return record && record.status === 'pending' ? (
+    return record && record.status === ('declined' as Review['status']) ? (
         <Button
             variant="outlined"
             color="primary"

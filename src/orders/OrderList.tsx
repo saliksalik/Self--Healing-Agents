@@ -92,8 +92,6 @@ const orderFilters = [
 
 const tabs = [
     { id: 'ordered', name: 'ordered' },
-    { id: 'delivered', name: 'delivered' },
-    { id: 'cancelled', name: 'cancelled' },
 ];
 
 const currencyStyle = {

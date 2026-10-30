@@ -10,10 +10,10 @@ class CategoriesListPage extends BasePage {
   async openCategories() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/categories');
-    await this.page.getByRole('heading', { name: 'Animals' }).waitFor({ state: 'visible', timeout: 180000 });
+    await this.page.getByRole('heading', { name: 'Pets' }).waitFor({ state: 'visible', timeout: 180000 });
   }
   async assertCategoriesVisible() {
-    await expect(this.page.getByRole('heading', { name: 'Animals' })).toBeVisible();
+    await expect(this.page.getByRole('heading', { name: 'Pets' })).toBeVisible();
     await expect(this.page.getByRole('link', { name: 'Edit' }).first()).toBeVisible();
   }
 }

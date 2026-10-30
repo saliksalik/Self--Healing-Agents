@@ -38,7 +38,7 @@ const AcceptButton = () => {
             },
         }
     );
-    return record && record.status === 'pending' ? (
+    return record && record.status === ('approved' as Review['status']) ? (
         <Button
             variant="outlined"
             color="primary"

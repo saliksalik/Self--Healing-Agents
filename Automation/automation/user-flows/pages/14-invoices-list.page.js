@@ -10,10 +10,10 @@ class InvoicesListPage extends BasePage {
   async openInvoices() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/invoices');
-    await this.page.locator('table tbody tr').first().waitFor({ state: 'visible', timeout: 180000 });
+    await this.page.locator('table tbody tr.invoice').first().waitFor({ state: 'visible', timeout: 180000 });
   }
   async assertInvoiceRows() {
-    expect(await this.page.locator('table tbody tr').count()).toBeGreaterThan(0);
+    expect(await this.page.locator('table tbody tr.invoice').count()).toBeGreaterThan(0);
   }
 }
 

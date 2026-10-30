@@ -10,10 +10,10 @@ class OrdersTableRowsPage extends BasePage {
   async openOrders() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/orders');
-    await this.page.locator('table tbody tr').first().waitFor({ state: 'visible', timeout: 180000 });
+    await this.page.locator('table tbody td.row').first().waitFor({ state: 'visible', timeout: 180000 });
   }
   async assertRowsPresent() {
-    const count = await this.page.locator('table tbody tr').count();
+    const count = await this.page.locator('table tbody td.row').count();
     expect(count).toBeGreaterThan(0);
   }
 }
